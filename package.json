@@ -1,0 +1,43 @@
+{
+  "name": "atlas-mcp-to-chat-ui",
+  "version": "1.0.0",
+  "description": "Chat-based UI tool for querying MongoDB Atlas using MCP and OpenAI",
+  "main": "server/dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node server/dist/index.js",
+    "dev": "nodemon --watch 'server/src/**/*.ts' --exec 'ts-node' server/src/index.ts",
+    "client:dev": "cd client && npm run dev",
+    "client:build": "cd client && npm run build",
+    "install:all": "npm install && cd client && npm install",
+    "dev:all": "concurrently \"npm run dev\" \"npm run client:dev\""
+  },
+  "keywords": [
+    "mongodb",
+    "mcp",
+    "openai",
+    "chat",
+    "analytics"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.0.3",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "openai": "^5.5.1"
+  }
+}

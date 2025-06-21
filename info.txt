@@ -1,0 +1,6 @@
+docker run --rm -i \
+  -e MDB_MCP_CONNECTION_STRING="mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.2/storedada" \
+  mongodb/mongodb-mcp-server:latest
+
+
+  mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.2
